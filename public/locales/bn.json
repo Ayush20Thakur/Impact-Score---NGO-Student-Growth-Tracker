@@ -1,0 +1,75 @@
+{
+  "common": {
+    "language": "ভাষা",
+    "logout": "লগ আউট",
+    "loading": "লোড হচ্ছে...",
+    "error": "ত্রুটি",
+    "success": "সফল",
+    "save": "সংরক্ষণ করুন",
+    "cancel": "বাতিল করুন",
+    "delete": "মুছে ফেলুন",
+    "edit": "সম্পাদনা করুন",
+    "add": "যোগ করুন",
+    "close": "বন্ধ করুন",
+    "back": "পিছনে"
+  },
+  "navbar": {
+    "liveClasses": "লাইভ ক্লাস",
+    "schedule": "সময়সূচী",
+    "notes": "নোট",
+    "aiAssistant": "AI অধ্যয়ন সহায়ক",
+    "myLearning": "আমার শেখার অভিযান"
+  },
+  "student": {
+    "dashboard": "শিক্ষার্থী ড্যাশবোর্ড",
+    "mySchedule": "আমার সময়সূচী",
+    "liveClasses": "লাইভ ক্লাস",
+    "notes": "অধ্যয়ন সামগ্রী",
+    "assignments": "অ্যাসাইনমেন্ট",
+    "joinClass": "ক্লাসে যোগ দিন",
+    "upcomingClasses": "আসন্ন ক্লাস",
+    "studyMaterials": "অধ্যয়ন সামগ্রী",
+    "classNotes": "ক্লাস নোট",
+    "referenceBooks": "রেফারেন্স বই"
+  },
+  "teacher": {
+    "dashboard": "শিক্ষক ড্যাশবোর্ড",
+    "createClass": "লাইভ ক্লাস তৈরি করুন",
+    "manageTimetable": "সময়সূচী পরিচালনা করুন",
+    "uploadMaterial": "সামগ্রী আপলোড করুন",
+    "liveClasses": "লাইভ ক্লাস",
+    "classLink": "Google মিট লিঙ্ক",
+    "scheduledTime": "নির্ধারিত সময়"
+  },
+  "ai": {
+    "studyBuddy": "AI অধ্যয়ন সহায়ক",
+    "askQuestion": "আপনার অধ্যয়ন সম্পর্কে যেকোনো প্রশ্ন করুন!",
+    "typing": "AI সহায়ক চিন্তা করছে...",
+    "placeholder": "একটি প্রশ্ন করুন...",
+    "sendMessage": "পাঠান"
+  },
+  "schedule": {
+    "mySchedule": "আমার সময়সূচী",
+    "monday": "সোমবার",
+    "tuesday": "মঙ্গলবার",
+    "wednesday": "বুধবার",
+    "thursday": "বৃহস্পতিবার",
+    "friday": "শুক্রবার",
+    "saturday": "শনিবার",
+    "sunday": "রবিবার",
+    "time": "সময়",
+    "subject": "বিষয়",
+    "teacher": "শিক্ষক",
+    "room": "কক্ষ"
+  },
+  "materials": {
+    "studyMaterials": "অধ্যয়ন সামগ্রী",
+    "classNotes": "ক্লাস নোট",
+    "assignments": "অ্যাসাইনমেন্ট",
+    "referenceBooks": "রেফারেন্স বই",
+    "uploadDate": "আপলোড তারিখ",
+    "downloadFile": "ডাউনলোড",
+    "previewFile": "প্রিভিউ",
+    "noMaterials": "এখনও কোনো সামগ্রী নেই"
+  }
+}

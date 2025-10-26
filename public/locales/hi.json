@@ -1,0 +1,75 @@
+{
+  "common": {
+    "language": "भाषा",
+    "logout": "लॉगआउट",
+    "loading": "लोड हो रहा है...",
+    "error": "त्रुटि",
+    "success": "सफल",
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "delete": "हटाएं",
+    "edit": "संपादित करें",
+    "add": "जोड़ें",
+    "close": "बंद करें",
+    "back": "वापस"
+  },
+  "navbar": {
+    "liveClasses": "लाइव क्लास",
+    "schedule": "शेड्यूल",
+    "notes": "नोट्स",
+    "aiAssistant": "AI अध्ययन सहायक",
+    "myLearning": "मेरा सीखने का रोमांच"
+  },
+  "student": {
+    "dashboard": "छात्र डैशबोर्ड",
+    "mySchedule": "मेरा शेड्यूल",
+    "liveClasses": "लाइव क्लास",
+    "notes": "अध्ययन सामग्री",
+    "assignments": "असाइनमेंट",
+    "joinClass": "क्लास में शामिल हों",
+    "upcomingClasses": "आने वाली क्लासें",
+    "studyMaterials": "अध्ययन सामग्री",
+    "classNotes": "कक्षा नोट्स",
+    "referenceBooks": "संदर्भ पुस्तकें"
+  },
+  "teacher": {
+    "dashboard": "शिक्षक डैशबोर्ड",
+    "createClass": "लाइव क्लास बनाएं",
+    "manageTimetable": "समय सारणी प्रबंधित करें",
+    "uploadMaterial": "सामग्री अपलोड करें",
+    "liveClasses": "लाइव क्लास",
+    "classLink": "गूगल मीट लिंक",
+    "scheduledTime": "निर्धारित समय"
+  },
+  "ai": {
+    "studyBuddy": "AI अध्ययन सहायक",
+    "askQuestion": "अपनी पढ़ाई के बारे में कुछ भी पूछें!",
+    "typing": "अध्ययन सहायक सोच रहा है...",
+    "placeholder": "एक सवाल पूछें...",
+    "sendMessage": "भेजें"
+  },
+  "schedule": {
+    "mySchedule": "मेरा शेड्यूल",
+    "monday": "सोमवार",
+    "tuesday": "मंगलवार",
+    "wednesday": "बुधवार",
+    "thursday": "गुरुवार",
+    "friday": "शुक्रवार",
+    "saturday": "शनिवार",
+    "sunday": "रविवार",
+    "time": "समय",
+    "subject": "विषय",
+    "teacher": "शिक्षक",
+    "room": "कक्ष"
+  },
+  "materials": {
+    "studyMaterials": "अध्ययन सामग्री",
+    "classNotes": "कक्षा नोट्स",
+    "assignments": "असाइनमेंट",
+    "referenceBooks": "संदर्भ पुस्तकें",
+    "uploadDate": "अपलोड की तारीख",
+    "downloadFile": "डाउनलोड",
+    "previewFile": "पूर्वावलोकन",
+    "noMaterials": "अभी कोई सामग्री उपलब्ध नहीं है"
+  }
+}

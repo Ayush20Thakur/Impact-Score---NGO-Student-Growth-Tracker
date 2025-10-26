@@ -1,0 +1,75 @@
+{
+  "common": {
+    "language": "Language",
+    "logout": "Logout",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "close": "Close",
+    "back": "Back"
+  },
+  "navbar": {
+    "liveClasses": "Live Classes",
+    "schedule": "Schedule",
+    "notes": "Notes",
+    "aiAssistant": "AI Study Buddy",
+    "myLearning": "My Learning Adventure"
+  },
+  "student": {
+    "dashboard": "Student Dashboard",
+    "mySchedule": "My Schedule",
+    "liveClasses": "Live Classes",
+    "notes": "Study Materials",
+    "assignments": "Assignments",
+    "joinClass": "Join Class",
+    "upcomingClasses": "Upcoming Classes",
+    "studyMaterials": "Study Materials",
+    "classNotes": "Class Notes",
+    "referenceBooks": "Reference Books"
+  },
+  "teacher": {
+    "dashboard": "Teacher Dashboard",
+    "createClass": "Create Live Class",
+    "manageTimetable": "Manage Timetable",
+    "uploadMaterial": "Upload Material",
+    "liveClasses": "Live Classes",
+    "classLink": "Google Meet Link",
+    "scheduledTime": "Scheduled Time"
+  },
+  "ai": {
+    "studyBuddy": "AI Study Buddy",
+    "askQuestion": "Ask me anything about your studies!",
+    "typing": "Study Buddy is thinking...",
+    "placeholder": "Ask a question...",
+    "sendMessage": "Send"
+  },
+  "schedule": {
+    "mySchedule": "My Schedule",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "time": "Time",
+    "subject": "Subject",
+    "teacher": "Teacher",
+    "room": "Room"
+  },
+  "materials": {
+    "studyMaterials": "Study Materials",
+    "classNotes": "Class Notes",
+    "assignments": "Assignments",
+    "referenceBooks": "Reference Books",
+    "uploadDate": "Upload Date",
+    "downloadFile": "Download",
+    "previewFile": "Preview",
+    "noMaterials": "No materials available yet"
+  }
+}

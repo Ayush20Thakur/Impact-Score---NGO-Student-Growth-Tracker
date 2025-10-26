@@ -1,0 +1,75 @@
+{
+  "common": {
+    "language": "மொழி",
+    "logout": "வெளியேறு",
+    "loading": "ஏற்றுகிறது...",
+    "error": "பிழை",
+    "success": "வெற்றி",
+    "save": "சேமிக்கவும்",
+    "cancel": "ரद்து செய்யவும்",
+    "delete": "நீக்கவும்",
+    "edit": "திருத்தவும்",
+    "add": "சேர்க்கவும்",
+    "close": "மூடவும்",
+    "back": "பின்னால்"
+  },
+  "navbar": {
+    "liveClasses": "நேரடி வகுப்புகள்",
+    "schedule": "அட்டவணை",
+    "notes": "குறிப்புகள்",
+    "aiAssistant": "AI படிப்பு துணை",
+    "myLearning": "என் கற்றல் சாகசம்"
+  },
+  "student": {
+    "dashboard": "மாணவர் டாஷ்போர்ட்",
+    "mySchedule": "என் அட்டவணை",
+    "liveClasses": "நேரடி வகுப்புகள்",
+    "notes": "ஆய்வு பொருட்கள்",
+    "assignments": "பணிகள்",
+    "joinClass": "வகுப்பில் சேரவும்",
+    "upcomingClasses": "வரவிருக்கும் வகுப்புகள்",
+    "studyMaterials": "ஆய்வு பொருட்கள்",
+    "classNotes": "வகுப்பு குறிப்புகள்",
+    "referenceBooks": "குறிப்பு புத்தகங்கள்"
+  },
+  "teacher": {
+    "dashboard": "ஆசிரியர் டாஷ்போர்ட்",
+    "createClass": "நேரடி வகுப்பு உருவாக்கவும்",
+    "manageTimetable": "அட்டவணை நிர்வகம்",
+    "uploadMaterial": "பொருள் பதிவேற்றவும்",
+    "liveClasses": "நேரடி வகுப்புகள்",
+    "classLink": "Google Meet இணைப்பு",
+    "scheduledTime": "திட்டமிடப்பட்ட நேரம்"
+  },
+  "ai": {
+    "studyBuddy": "AI படிப்பு துணை",
+    "askQuestion": "உங்கள் பாடங்களைப் பற்றி எதையும் கேளுங்கள்!",
+    "typing": "AI துணை சிந்தித்துக் கொண்டிருக்கிறது...",
+    "placeholder": "ஒரு கேள்வி கேளுங்கள்...",
+    "sendMessage": "அனுப்பு"
+  },
+  "schedule": {
+    "mySchedule": "என் அட்டவணை",
+    "monday": "திங்கட்கிழமை",
+    "tuesday": "செவ்வாய்கிழமை",
+    "wednesday": "புதன்கிழமை",
+    "thursday": "வியாழக்கிழமை",
+    "friday": "வெள்ளிக்கிழமை",
+    "saturday": "சனிக்கிழமை",
+    "sunday": "ஞாயிற்றுக்கிழமை",
+    "time": "நேரம்",
+    "subject": "பொருள்",
+    "teacher": "ஆசிரியர்",
+    "room": "அறை"
+  },
+  "materials": {
+    "studyMaterials": "ஆய்வு பொருட்கள்",
+    "classNotes": "வகுப்பு குறிப்புகள்",
+    "assignments": "பணிகள்",
+    "referenceBooks": "குறிப்பு புத்தகங்கள்",
+    "uploadDate": "பதிவேற்றிய தேதி",
+    "downloadFile": "பதிவிறக்கம்",
+    "previewFile": "முன்னோட்டம்",
+    "noMaterials": "இதுவரை பொருட்கள் எதுவும் கிடைக்கவில்லை"
+  }
+}

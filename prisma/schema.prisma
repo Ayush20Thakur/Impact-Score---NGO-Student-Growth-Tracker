@@ -1,0 +1,296 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// User model - base for all roles
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role
+  center    String   @default("Main Center")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  teacher   Teacher?
+  student   Student?
+  parent    Parent?
+  admin     Admin?
+}
+
+enum Role {
+  ADMIN
+  TEACHER
+  STUDENT
+  PARENT
+}
+
+// Teacher model
+model Teacher {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  center    String   @default("Main Center")
+  subject   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  students      Student[]
+  schedules     Schedule[]
+  liveClasses   LiveClass[]
+  studyMaterials StudyMaterial[]
+  xpTransactions XPTransaction[]
+}
+
+// Student model
+model Student {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  teacherId   String
+  teacher     Teacher  @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+  parentId    String?
+  parent      Parent?  @relation(fields: [parentId], references: [id], onDelete: SetNull)
+
+  level       Int      @default(1)
+  xp          Int      @default(0)
+  attendance  Int      @default(100)
+  center      String   @default("Main Center")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  badges          Badge[]
+  goals           Goal[]
+  xpTransactions  XPTransaction[]
+  scheduleStudents ScheduleStudent[]
+  liveClassStudents LiveClassStudent[]
+  studyMaterialStudents StudyMaterialStudent[]
+  chatMessages    ChatMessage[]
+  attendanceRecords Attendance[]
+}
+
+// Parent model
+model Parent {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  center    String   @default("Main Center")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  students Student[]
+}
+
+// Admin model
+model Admin {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  center    String   @default("Main Center")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Badge model
+model Badge {
+  id          String   @id @default(cuid())
+  studentId   String
+  student     Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  name        String
+  description String
+  icon        String   @default("🏆")
+  earnedDate  DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// Goal model
+model Goal {
+  id          String   @id @default(cuid())
+  studentId   String
+  student     Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  title       String
+  description String?
+  progress    Int      @default(0)
+  deadline    DateTime
+  status      GoalStatus @default(ACTIVE)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+enum GoalStatus {
+  ACTIVE
+  COMPLETED
+  ABANDONED
+}
+
+// XP Transaction model
+model XPTransaction {
+  id        String   @id @default(cuid())
+  studentId String
+  student   Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  teacherId String
+  teacher   Teacher  @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+  amount    Int
+  category  String   // e.g., "homework", "participation", "test", "attendance"
+  note      String?
+  date      DateTime @default(now())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Schedule model
+model Schedule {
+  id        String   @id @default(cuid())
+  teacherId String
+  teacher   Teacher  @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+  subject   String
+  dayOfWeek Int      // 0-6 (Sunday-Saturday)
+  startTime String   // HH:MM format
+  endTime   String   // HH:MM format
+  room      String?
+  center    String   @default("Main Center")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  scheduleStudents ScheduleStudent[]
+}
+
+// Junction table for Schedule and Student (many-to-many)
+model ScheduleStudent {
+  id         String   @id @default(cuid())
+  scheduleId String
+  schedule   Schedule @relation(fields: [scheduleId], references: [id], onDelete: Cascade)
+  studentId  String
+  student    Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@unique([scheduleId, studentId])
+}
+
+// Live Class model
+model LiveClass {
+  id              String   @id @default(cuid())
+  teacherId       String
+  teacher         Teacher  @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+  title           String
+  description     String?
+  googleMeetLink  String
+  scheduledTime   DateTime
+  center          String   @default("Main Center")
+  status          LiveClassStatus @default(SCHEDULED)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  liveClassStudents LiveClassStudent[]
+}
+
+enum LiveClassStatus {
+  SCHEDULED
+  ONGOING
+  COMPLETED
+  CANCELLED
+}
+
+// Junction table for LiveClass and Student (many-to-many)
+model LiveClassStudent {
+  id          String   @id @default(cuid())
+  liveClassId String
+  liveClass   LiveClass @relation(fields: [liveClassId], references: [id], onDelete: Cascade)
+  studentId   String
+  student     Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@unique([liveClassId, studentId])
+}
+
+// Study Material model
+model StudyMaterial {
+  id        String   @id @default(cuid())
+  teacherId String
+  teacher   Teacher  @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+  title     String
+  description String?
+  category  MaterialCategory
+  fileUrl   String
+  fileName  String
+  fileType  String   // pdf, doc, image, etc.
+  center    String   @default("Main Center")
+  uploadedAt DateTime @default(now())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  studyMaterialStudents StudyMaterialStudent[]
+}
+
+enum MaterialCategory {
+  CLASS_NOTES
+  ASSIGNMENTS
+  REFERENCE_BOOKS
+  VIDEOS
+  QUIZZES
+}
+
+// Junction table for StudyMaterial and Student (many-to-many)
+model StudyMaterialStudent {
+  id              String   @id @default(cuid())
+  studyMaterialId String
+  studyMaterial   StudyMaterial @relation(fields: [studyMaterialId], references: [id], onDelete: Cascade)
+  studentId       String
+  student         Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@unique([studyMaterialId, studentId])
+}
+
+// Chat Message model (for AI Study Buddy)
+model ChatMessage {
+  id        String   @id @default(cuid())
+  studentId String
+  student   Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  role      MessageRole
+  content   String
+  timestamp DateTime @default(now())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum MessageRole {
+  USER
+  ASSISTANT
+}
+
+// Attendance model
+model Attendance {
+  id        String   @id @default(cuid())
+  studentId String
+  student   Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  date      DateTime
+  status    AttendanceStatus
+  notes     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([studentId, date])
+}
+
+enum AttendanceStatus {
+  PRESENT
+  ABSENT
+  LATE
+  EXCUSED
+}
+

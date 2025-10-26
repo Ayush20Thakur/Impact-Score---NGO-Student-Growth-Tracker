@@ -1,0 +1,75 @@
+{
+  "common": {
+    "language": "భాష",
+    "logout": "లాగ్ అవుట్",
+    "loading": "లోడ్ చేస్తోంది...",
+    "error": "లోపం",
+    "success": "విజయం",
+    "save": "సేవ్ చేయండి",
+    "cancel": "రద్దు చేయండి",
+    "delete": "తొలగించండి",
+    "edit": "సవరించండి",
+    "add": "జోడించండి",
+    "close": "ఓపెన్ చేయండి",
+    "back": "వెనుకకు"
+  },
+  "navbar": {
+    "liveClasses": "లైవ్ క్లాసులు",
+    "schedule": "షెడ్యూల్",
+    "notes": "నోట్‌లు",
+    "aiAssistant": "AI అధ్యయన సహాయక",
+    "myLearning": "నా నేర్పు సాహసం"
+  },
+  "student": {
+    "dashboard": "విద్యార్థి డ్యాష్‌బోర్డ్",
+    "mySchedule": "నా షెడ్యూల్",
+    "liveClasses": "లైవ్ క్లాసులు",
+    "notes": "అధ్యయన సామగ్రి",
+    "assignments": "కार్యనిర్దేశనాలు",
+    "joinClass": "క్లాసులో చేరండి",
+    "upcomingClasses": "రానున్న కლాసులు",
+    "studyMaterials": "అధ్యయన సామగ్రి",
+    "classNotes": "క్లాస్ నోట్‌లు",
+    "referenceBooks": "సూచన పుస్తకాలు"
+  },
+  "teacher": {
+    "dashboard": "ఉపాధ్యాయ డ్యాష్‌బోర్డ్",
+    "createClass": "లైవ్ క్లాస్ సృష్టించండి",
+    "manageTimetable": "టైమ్‌టేబిల్ నిర్వహించండి",
+    "uploadMaterial": "సామగ్రి అప్‌లోడ్ చేయండి",
+    "liveClasses": "లైవ్ క్లాసులు",
+    "classLink": "Google Meet లింక్",
+    "scheduledTime": "నిర్ధారిత సమయం"
+  },
+  "ai": {
+    "studyBuddy": "AI అధ్యయన సహాయక",
+    "askQuestion": "మీ చదువు గురించి ఏదైనా అడగండి!",
+    "typing": "AI సహాయక ఆలోచిస్తోంది...",
+    "placeholder": "ఒక ప్రశ్న అడగండి...",
+    "sendMessage": "పంపండి"
+  },
+  "schedule": {
+    "mySchedule": "నా షెడ్యూల్",
+    "monday": "సోమవారం",
+    "tuesday": "మంగళవారం",
+    "wednesday": "బుధవారం",
+    "thursday": "గురువారం",
+    "friday": "శుక్రవారం",
+    "saturday": "శనివారం",
+    "sunday": "ఆదివారం",
+    "time": "సమయం",
+    "subject": "విషయం",
+    "teacher": "ఉపాధ్యాయుడు",
+    "room": "గది"
+  },
+  "materials": {
+    "studyMaterials": "అధ్యయన సామగ్రి",
+    "classNotes": "క్లాస్ నోట్‌లు",
+    "assignments": "కార్యనిర్దేశనాలు",
+    "referenceBooks": "సూచన పుస్తకాలు",
+    "uploadDate": "అప్‌లోడ్ తేదీ",
+    "downloadFile": "డౌన్‌లోడ్",
+    "previewFile": "ప్రివ్యూ",
+    "noMaterials": "ఇంకా సామగ్రి లేదు"
+  }
+}
