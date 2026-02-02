@@ -222,4 +222,3 @@ For support, email your-email@example.com or open an issue in the repository.
 ---
 
 Made with ❤️ for education and social impact
-
