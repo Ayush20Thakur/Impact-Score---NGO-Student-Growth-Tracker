@@ -186,24 +186,10 @@ nogtacker/
 - Responds in the student's selected language
 - Provides educational assistance and motivation
 
-## 🌍 Deployment
+## 🤝 Contributers
 
-### Deploy to Vercel
-1. Push your code to GitHub
-2. Import your repository on [Vercel](https://vercel.com)
-3. Add environment variables in Vercel dashboard
-4. Deploy!
-
-### Environment Variables for Production
-Make sure to set these in your deployment platform:
-- `DATABASE_URL`
-- `JWT_SECRET` (use a strong secret!)
-- `GOOGLE_GENERATIVE_AI_API_KEY`
-- `NEXT_PUBLIC_API_URL`
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+Ayush Thakur
+Syed Zohaib Karim
 
 ## 📝 License
 
@@ -215,10 +201,4 @@ This project is licensed under the MIT License.
 - Designed with accessibility and multi-language support in mind
 - Powered by modern web technologies
 
-## 📧 Support
 
-For support, email your-email@example.com or open an issue in the repository.
-
----
-
-Made with ❤️ for education and social impact
